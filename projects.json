@@ -1,0 +1,29 @@
+[
+    {
+      "title": "Dropbox-clone",
+      "description":
+        "This is my first clone next app which I made watching some tutorial so it&apos;s not entirely made by me.",
+      "tech": "NextJs Redux Tailwind",
+      "src": "/images/dropbox.png",
+      "alt": "Project 1",
+      "projectLink": "https://dropbox-clone-snowy-eta.vercel.app/"
+    },
+    {
+      "title": "My-Portfolio",
+      "description":
+        "This is the first site where I put lots of effort while designing it and after doing it the way it looks makes me feel proud on myself ;)",
+      "tech": "NextJs Tailwind",
+      "src": "/images/portfolio.png",
+      "alt": "Project 1",
+      "projectLink": "/"
+    },
+    {
+      "title": "Art meet web3",
+      "description":
+        "Developed a sleek and user-friendly frontend for an NFT website using Tailwind CSS and Next.js, harnessing Next.js's built-in SEO capabilities alongside responsive layouts and customizable themes. Leveraged Tailwind CSS for efficient styling, resulting in a visually stunning platform that drives user engagement and brand visibility.",
+      "tech": "NextJs Tailwind Lottie",
+      "src": "/images/monsterx.png",
+      "alt": "monsterx",
+      "projectLink": "https://www.monsterx.io/"
+    }
+  ]
