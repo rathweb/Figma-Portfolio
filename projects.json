@@ -2,7 +2,7 @@
     {
       "title": "Dropbox-clone",
       "description":
-        "This is my first clone next app which I made watching some tutorial so it&apos;s not entirely made by me.",
+        "A clone for educational purpose.",
       "tech": "NextJs Redux Tailwind",
       "src": "/images/dropbox.png",
       "alt": "Project 1",
@@ -11,7 +11,7 @@
     {
       "title": "My-Portfolio",
       "description":
-        "This is the first site where I put lots of effort while designing it and after doing it the way it looks makes me feel proud on myself ;)",
+        "A portfolio website converted from figma to pixel perfect design",
       "tech": "NextJs Tailwind",
       "src": "/images/portfolio.png",
       "alt": "Project 1",

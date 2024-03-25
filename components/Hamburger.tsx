@@ -2,37 +2,9 @@
 import React, { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Image from "next/image";
+import { FaCode } from "react-icons/fa6";
+import { navigationItems, socialMediaLinks } from "./Header";
 
-const socialMediaLinks = [
-  {
-    href: "https://github.com/rathweb",
-    src: "/images/Github.png",
-    alt: "GitHub",
-  },
-  {
-    href: "https://www.linkedin.com/in/rajveer-singh-994441186/",
-    src: "/images/Linkdin.png",
-    alt: "LinkedIn",
-  },
-  {
-    href: "https://twitter.com/rj_singh7552",
-    src: "/images/X.png",
-    alt: "Twitter",
-  },
-  {
-    href: "https://www.instagram.com/singh_rajveer021/",
-    src: "/images/Insta.png",
-    alt: "Instagram",
-  },
-];
-
-const navigationItems = [
-  { href: "/", label: "home" },
-  { href: "/dashboard/works", label: "works" },
-  { href: "/dashboard/about", label: "about-me" },
-  { href: "/dashboard/contact", label: "contacts" },
-];
 
 const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,16 +39,10 @@ const Hamburger = () => {
                   <XMarkIcon className="-ml-5 -mt-8 h-8 w-8 " aria-hidden="true" />
                 </button>
               </div>
-              <div className="flex cursor-pointer -mt-8">
-                <Image
-                className="text-white -mt-3 -ml-2"
-                  src="/images/Logo3.png"
-                  width="30"
-                  height="30"
-                  alt="Logo"
-                />
+              <div className="flex items-center cursor-pointer -mt-8">
+                <FaCode className="text-white text-xl"/>
                 <Link href="/">
-                  <h1 onClick={closeMenu} className="text-white text-xl font-bold pl-1 -mt-2">Rajveer</h1>
+                  <h1 onClick={closeMenu} className="text-white text-xl font-bold pl-2">Rajveer</h1>
                 </Link>
               </div>
               <ul onClick={closeMenu} className="mt-12 flex flex-col gap-10 text-[#ABB2BF] text-4xl">
@@ -91,17 +57,11 @@ const Hamburger = () => {
                   </li>
                 ))}
               </ul>
-              <ul className="flex gap-4 mt-40 ml-10 ">
+              <ul className="flex gap-10 mt-40 ml-10 ">
                 {socialMediaLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href}>
-                      <Image
-                        width={40}
-                        height={40}
-                        className="pt-5 mr-1 cursor-pointer"
-                        src={link.src}
-                        alt={link.alt}
-                      />
+                  <li key={index} >
+                    <Link href={link.href} className="text-white " >
+                      {link.src}
                     </Link>
                   </li>
                 ))}

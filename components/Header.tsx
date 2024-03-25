@@ -2,30 +2,38 @@ import Image from "next/image";
 import Link from "next/link";
 import Hamburger from "./Hamburger";
 
-const socialMediaLinks = [
+import {
+  FaCode,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaXTwitter,
+} from "react-icons/fa6";
+
+export const socialMediaLinks = [
   {
     href: "https://github.com/rathweb",
-    src: "/images/github.png",
-    alt: "GitHub",
+    src: <FaGithub />,
+    alt: "github",
   },
   {
     href: "https://www.linkedin.com/in/rajveer-singh-994441186/",
-    src: "/images/linkdin.png",
-    alt: "LinkedIn",
+    src: <FaLinkedin />,
+    alt: "linkdin",
   },
   {
     href: "https://twitter.com/rj_singh7552",
-    src: "/images/twitter.png",
+    src: <FaXTwitter />,
     alt: "Twitter",
   },
   {
     href: "https://www.instagram.com/singh_rajveer021/",
-    src: "/images/insta.png",
+    src: <FaInstagram />,
     alt: "Instagram",
   },
 ];
 
-const navigationItems = [
+export const navigationItems = [
   { href: "/", label: "home" },
   { href: "/dashboard/works", label: "works" },
   { href: "/dashboard/about", label: "about-me" },
@@ -39,31 +47,36 @@ function Header() {
       <nav className="hidden lg:block">
         {" "}
         {/* Hide on screens smaller than md */}
-        <div className="bg-[#282C33] container fixed m-auto h-14 pt-5">
-          <div className="fixed flex flex-col -mt-5 ">
-            <Image width={2} height={2} src="/images/Line.png" alt="Header line" />
+        <div className="container fixed m-auto h-14 pt-5 bg-white bg-opacity-10 backdrop-filter shadow-md">
+          <div className="fixed flex flex-col justify-center -mt-5 ">
+            <Image
+              width={2}
+              height={2}
+              src="/images/Line.png"
+              alt="Header line"
+              className="ml-2"
+            />
             {socialMediaLinks.map((link, index) => (
-              <a key={index} href={link.href}>
-                <Image
-                  width="20"
-                  height="20"
-                  className="pt-5 mr-1 cursor-pointer"
-                  src={link.src}
-                  alt={link.alt}
-                />
-              </a>
+              <Link
+                key={index}
+                className="text-white text-xl py-3 "
+                target="_"
+                href={link.href}
+              >
+                {link.src}
+              </Link>
             ))}
           </div>
 
           <div className="container flex justify-between ">
             <div className="flex cursor-pointer items-center">
-              <Image src="/images/Logo3.png" width="30" height="30" alt="Logo" />
-              <h1 className="text-white text-xl font-bold mb-3 pl-1">Rajveer</h1>
+              <FaCode className="text-white text-xl" />
+              <h1 className="text-white text-xl font-bold pl-1">Rajveer</h1>
             </div>
 
             <ul className="flex text-[#ABB2BF] text-xl justify-between mr-20 cursor-pointer">
               {navigationItems.map((item, index) => (
-                <li key={index} className="pr-10 hover:text-white">
+                <li key={index} className="pr-10 text-white hover:text-[#c778dd]">
                   <Link href={item.href}>
                     <h1>
                       <span className="text-[#C778DD]">#</span>
@@ -81,4 +94,3 @@ function Header() {
 }
 
 export default Header;
-
