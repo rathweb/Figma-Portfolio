@@ -1,33 +1,14 @@
 import Image from "next/image";
-const socialMediaLinks = [
-  {
-    href: "https://github.com/rathweb",
-    src: "/images/github.png",
-    alt: "GitHub",
-  },
-  {
-    href: "https://www.linkedin.com/in/rajveer-singh-994441186/",
-    src: "/images/linkdin.png",
-    alt: "LinkedIn",
-  },
-  {
-    href: "https://twitter.com/rj_singh7552",
-    src: "/images/twitter.png",
-    alt: "Twitter",
-  },
-  {
-    href: "https://www.instagram.com/singh_rajveer021/",
-    src: "/images/insta.png",
-    alt: "Instagram",
-  },
-];
+import { socialMediaLinks } from "./Header";
+import Link from "next/link";
+import { FaCode } from "react-icons/fa6";
 
 function Footer() {
   return (
     <div className="text-[#abb2bf] m-5 h-20 ">
       <div className=" flex  lg:justify-between md:justify-between gap-10">
         <div className="cursor-pointer">
-          <Image className="" src="/images/Logo3.png" width="20" height="20" alt="logo" />
+          <FaCode className="text-xl text-white"/>
           <h1 className="text-white text-xl font-bold pl-2 -mt-8 ml-3">Rajveer</h1>
           <div className="flex flex-wrap">
             <p className="pt-5 text-xs">
@@ -40,9 +21,7 @@ function Footer() {
           <h1 className="text-xl text-white">Media</h1>
           <div className="flex pt-2">
            {socialMediaLinks.map((link, index)=>(
-            <a target="_" key={index} href={link.href}>
-              <Image className="m-2" width={20} height={20} src={link.src} alt={link.alt} />
-            </a>
+            <Link href={link.href} key={index}>{link.src}</Link>
            ))}
           </div>
         </div>
