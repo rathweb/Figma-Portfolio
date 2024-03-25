@@ -60,7 +60,7 @@ const Hamburger = () => {
               <ul className="flex gap-10 mt-40 ml-10 ">
                 {socialMediaLinks.map((link, index) => (
                   <li key={index} >
-                    <Link href={link.href} className="text-white " >
+                    <Link href={link.href} className="text-white text-3xl" >
                       {link.src}
                     </Link>
                   </li>
