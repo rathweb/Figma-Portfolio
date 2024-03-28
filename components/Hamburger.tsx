@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { FaCode } from "react-icons/fa6";
 import { navigationItems, socialMediaLinks } from "./Header";
+import Image from "next/image";
 
 
 const Hamburger = () => {
@@ -40,9 +41,10 @@ const Hamburger = () => {
                 </button>
               </div>
               <div className="flex items-center cursor-pointer -mt-8">
-                <FaCode className="text-white text-xl"/>
-                <Link href="/">
-                  <h1 onClick={closeMenu} className="text-white text-xl font-bold pl-2">Rajveer</h1>
+                {/* <FaCode className="text-white text-xl"/> */}
+                <Link href="/" className="flex">
+                  <Image onClick={closeMenu} width={24} height={24} className="w-20 -mt-5 -ml-5" src="/logo.svg" alt="logo"/>
+                  {/* <h1 onClick={closeMenu} className="text-white text-xl font-bold">Rajveer</h1> */}
                 </Link>
               </div>
               <ul onClick={closeMenu} className="mt-12 flex flex-col gap-10 text-[#ABB2BF] text-4xl">

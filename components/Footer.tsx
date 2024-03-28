@@ -8,8 +8,9 @@ function Footer() {
     <div className="text-[#abb2bf] m-5 h-20 ">
       <div className=" flex sm:justify-between items-center">
         <div className=" justify-center flex flex-col">
-          <div className="flex items-center gap-2 mt-5">
-            <FaCode className="text-xl text-white " />
+          <div className="flex items-center mt-5">
+            <Image width={24} height={24} className="w-16 " src="/logo.svg" alt="logo"/>
+            {/* <FaCode className="text-xl text-white " /> */}
             <h1 className="text-white text-xl font-bold ">Rajveer</h1>
           </div>
           <p className="pt-5 text-xs sm:text-base">

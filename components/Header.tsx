@@ -47,7 +47,7 @@ function Header() {
       <nav className="hidden lg:block">
         {" "}
         {/* Hide on screens smaller than md */}
-        <div className="container fixed m-auto h-14 pt-5 bg-white bg-opacity-10 backdrop-filter shadow-md">
+        <div className="container fixed m-auto h-14 pt-5 bg-[#282C33] backdrop-filter shadow-md">
           <div className="fixed flex flex-col justify-center -mt-5 ">
             <Image
               width={2}
@@ -69,12 +69,13 @@ function Header() {
           </div>
 
           <div className="container flex justify-between ">
-            <div className="flex cursor-pointer items-center">
-              <FaCode className="text-white text-xl" />
-              <h1 className="text-white text-xl font-bold pl-1">Rajveer</h1>
-            </div>
+            {/* <div className="flex cursor-pointer items-center"> */}
+              {/* <FaCode className="text-white text-xl" /> */}
+              <Image width={24} height={24} className="w-16 -mt-6 " src="/logo.svg" alt="logo"/>
+              {/* <h1 className="text-white text-xl -mt-5 font-bold pl-1">Rajveer</h1> */}
+            {/* </div> */}
 
-            <ul className="flex text-[#ABB2BF] text-xl justify-between mr-20 cursor-pointer">
+            <ul className="flex text-[#ABB2BF] text-xl justify-between cursor-pointer">
               {navigationItems.map((item, index) => (
                 <li key={index} className="pr-10 text-white hover:text-[#c778dd]">
                   <Link href={item.href}>
